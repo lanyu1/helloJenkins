@@ -1,0 +1,56 @@
+server:
+  port: 8801
+  servlet:
+    context-path: /
+# 配置文件加密key 生产环境中可通过环境变量、命令行等形式进行设置
+#jasypt:
+#  encryptor:
+#    password: lanxi
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/lanxi?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      stat-view-servlet:
+        # 默认true 内置监控页面首页/druid/index.html
+        enabled: true
+        url-pattern: /druid/*
+        # 允许清空统计数据
+        reset-enable: true
+        login-username: root
+        login-password: 123456
+        # IP白名单 多个逗号分隔
+        allow:
+        # IP黑名单
+        deny:
+      filter:
+        stat:
+          # 开启监控sql
+          enabled: true
+          # 显示并标注sql 默认当超过3秒显示
+          log-slow-sql: true
+          slow-sql-millis: 3000
+          merge-sql: true
+        # 防SQL注入过滤
+        wall:
+          config:
+            # 允许多条sql同时执行
+            multi-statement-allow: true
+  jpa:
+    show-sql: true
+    # 自动生成表结构
+    hibernate:
+      ddl-auto: update
+  # 文件大小上传配置
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  jackson:
+    time-zone: GMT+8
+    serialization: false
+# Mybatis-plus
+mybstis-plus:
+  mapper-locations: classpath*:mapper/*.xml
