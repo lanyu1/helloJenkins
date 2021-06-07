@@ -1,6 +1,7 @@
 package com.lanyu.jenkins.hellojenkins.config.security.jwt;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,5 +11,6 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-public class AuthenticationSuccessHandler {
+public class AuthenticationSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
+
 }
