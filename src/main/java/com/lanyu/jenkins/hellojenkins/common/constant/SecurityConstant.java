@@ -1,4 +1,4 @@
-package com.lanyu.jenkins.hellojenkins.common.constant.constant;
+package com.lanyu.jenkins.hellojenkins.common.constant;
 
 import cn.hutool.core.util.IdUtil;
 

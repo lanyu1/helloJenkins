@@ -2,7 +2,7 @@ package com.lanyu.jenkins.hellojenkins.config.security.jwt;
 
 import cn.hutool.core.util.StrUtil;
 import com.google.gson.Gson;
-import com.lanyu.jenkins.hellojenkins.common.constant.constant.SecurityConstant;
+import com.lanyu.jenkins.hellojenkins.common.constant.SecurityConstant;
 import com.lanyu.jenkins.hellojenkins.common.redis.RedisTemplateHelper;
 import com.lanyu.jenkins.hellojenkins.common.utils.ResponseUtil;
 import com.lanyu.jenkins.hellojenkins.common.vo.TokenUser;

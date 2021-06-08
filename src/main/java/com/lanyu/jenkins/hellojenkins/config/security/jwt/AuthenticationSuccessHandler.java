@@ -4,7 +4,7 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import com.google.gson.Gson;
 import com.lanyu.jenkins.hellojenkins.common.annotation.SystemLog;
-import com.lanyu.jenkins.hellojenkins.common.constant.constant.SecurityConstant;
+import com.lanyu.jenkins.hellojenkins.common.constant.SecurityConstant;
 import com.lanyu.jenkins.hellojenkins.common.enums.LogType;
 import com.lanyu.jenkins.hellojenkins.common.redis.RedisTemplateHelper;
 import com.lanyu.jenkins.hellojenkins.common.utils.IpInfoUtil;
@@ -20,7 +20,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
