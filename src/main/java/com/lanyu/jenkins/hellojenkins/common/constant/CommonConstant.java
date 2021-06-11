@@ -30,4 +30,20 @@ public interface CommonConstant {
      * 普通用户
      */
     Integer USER_TYPE_NORMAL = 0;
+
+    /**
+     * 全部数据权限
+     */
+    Integer DATA_TYPE_ALL = 0;
+
+
+    /**
+     * 部门负责人类型 主负责人
+     */
+    Integer HEADER_TYPE_MAIN = 0;
+
+    /**
+     * 部门负责人类型 副负责人
+     */
+    Integer HEADER_TYPE_VICE = 1;
 }
