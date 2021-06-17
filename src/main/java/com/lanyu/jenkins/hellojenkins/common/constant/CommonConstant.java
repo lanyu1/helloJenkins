@@ -62,4 +62,9 @@ public interface CommonConstant {
      */
     Integer DATA_TYPE_SAME = 3;
 
+    /**
+     * 操作类型权限
+     */
+    Integer PERMISSION_OPERATION = 1;
+
 }

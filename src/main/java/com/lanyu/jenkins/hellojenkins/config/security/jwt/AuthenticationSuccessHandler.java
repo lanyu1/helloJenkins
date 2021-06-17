@@ -44,6 +44,7 @@ public class AuthenticationSuccessHandler extends SavedRequestAwareAuthenticatio
     @Autowired
     private IpInfoUtil ipInfoUtil;
 
+    @Autowired
     private RedisTemplateHelper redisTemplate;
 
     /**
