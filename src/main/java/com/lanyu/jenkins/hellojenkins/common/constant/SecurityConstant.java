@@ -41,5 +41,10 @@ public interface SecurityConstant {
     /**
      * JWT签名加密key
      */
-    String JWT_SIGN_KEY = IdUtil.simpleUUID();;
+    String JWT_SIGN_KEY = IdUtil.simpleUUID();
+
+    /**
+     * 权限参数头
+     */
+    String AUTHORITIES = "authorities";
 }

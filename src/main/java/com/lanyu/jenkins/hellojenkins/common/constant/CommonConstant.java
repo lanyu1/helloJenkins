@@ -46,4 +46,20 @@ public interface CommonConstant {
      * 部门负责人类型 副负责人
      */
     Integer HEADER_TYPE_VICE = 1;
+
+    /**
+     * 自定义数据权限
+     */
+    Integer DATA_TYPE_CUSTOM = 1;
+
+    /**
+     * 本部门及以下
+     */
+    Integer DATA_TYPE_UNDER = 2;
+
+    /**
+     * 本部门
+     */
+    Integer DATA_TYPE_SAME = 3;
+
 }
