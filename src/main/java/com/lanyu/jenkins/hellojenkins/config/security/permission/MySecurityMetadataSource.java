@@ -4,11 +4,13 @@ import cn.hutool.core.util.StrUtil;
 import com.lanyu.jenkins.hellojenkins.common.constant.CommonConstant;
 import com.lanyu.jenkins.hellojenkins.module.base.entity.Permission;
 import com.lanyu.jenkins.hellojenkins.module.base.service.PermissionService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;
 import org.springframework.security.web.FilterInvocation;
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
+import org.springframework.stereotype.Component;
 import org.springframework.util.PathMatcher;
 
 import java.util.*;
@@ -20,6 +22,8 @@ import java.util.*;
  * @author lanyu
  * @date 2021年05月27日 13:38
  */
+@Slf4j
+@Component
 public class MySecurityMetadataSource implements FilterInvocationSecurityMetadataSource {
 
     @Autowired

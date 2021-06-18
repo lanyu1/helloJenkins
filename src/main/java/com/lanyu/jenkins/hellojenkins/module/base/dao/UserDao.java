@@ -16,10 +16,10 @@ public interface UserDao extends LanXiBaseDao<User,String> {
 
     /**
      * 通过用户名获取用户
-     * @param userName
+     * @param username
      * @return
      */
-    User findByUserName(String userName);
+    User findByUsername(String username);
 
     /**
      * 通过手机获取用户
@@ -48,6 +48,6 @@ public interface UserDao extends LanXiBaseDao<User,String> {
      * @param departmentTitle
      */
     @Modifying
-    @Query(" update User u set u.departmentTitle=?2 where u.departmentId=?1")
+    @Query(value = " update User u set u.departmentTitle=?2 where u.departmentId=?1")
     void updateDepartmentTitle(String departmentId, String departmentTitle);
 }

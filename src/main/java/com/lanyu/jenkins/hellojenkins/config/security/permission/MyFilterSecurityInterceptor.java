@@ -2,6 +2,7 @@ package com.lanyu.jenkins.hellojenkins.config.security.permission;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.SecurityMetadataSource;
 import org.springframework.security.access.intercept.AbstractSecurityInterceptor;
 import org.springframework.security.access.intercept.InterceptorStatusToken;
@@ -13,12 +14,15 @@ import javax.servlet.*;
 import java.io.IOException;
 
 /**
+ * 权限管理过滤器
+ * 监控用户行为
  * @author lanyu
  * @date 2021年05月27日 13:38
  */
 @Slf4j
 @Component
 public class MyFilterSecurityInterceptor extends AbstractSecurityInterceptor implements Filter {
+
     @Autowired
     private FilterInvocationSecurityMetadataSource securityMetadataSource;
 

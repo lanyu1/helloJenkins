@@ -3,7 +3,9 @@ package com.lanyu.jenkins.hellojenkins.module.base.dao.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lanyu.jenkins.hellojenkins.module.base.entity.Role;
 import com.lanyu.jenkins.hellojenkins.module.base.entity.UserRole;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.data.jpa.repository.Modifying;
 
 import java.util.List;
 

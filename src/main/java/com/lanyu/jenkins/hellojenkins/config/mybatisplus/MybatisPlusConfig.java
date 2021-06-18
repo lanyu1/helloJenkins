@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2021年05月27日 11:08
  */
 @Configuration
-@MapperScan({"com.lanyu.jenkins.hellojenkins.mapper.*.mapper"})
+@MapperScan({"com.lanyu.jenkins.hellojenkins.module.base.dao.mapper"})
 public class MybatisPlusConfig {
 
     /**
