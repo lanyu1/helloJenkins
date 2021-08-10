@@ -3,6 +3,7 @@ package com.lanyu.jenkins.hellojenkins;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 /**
  * @author lanyu
@@ -11,8 +12,8 @@ import org.springframework.cache.annotation.EnableCaching;
 //启用缓存
 @EnableCaching
 @SpringBootApplication
+@CrossOrigin
 public class HelloJenkinsApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(HelloJenkinsApplication.class, args);
     }
