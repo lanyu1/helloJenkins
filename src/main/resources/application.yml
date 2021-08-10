@@ -129,7 +129,7 @@ ignored:
     - /lanxi/actuator/**
     - /lanxi/admin/**
     - /lanxi/dictData/getByType/**
-    - /lanxi/user/regist
+    - /lanxi/user/**
     - /lanxi/common/**
     - /druid/**
     - /doc.html
