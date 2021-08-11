@@ -63,6 +63,36 @@ public interface CommonConstant {
     Integer DATA_TYPE_SAME = 3;
 
     /**
+     * 0级菜单
+     */
+    Integer LEVEL_ZERO = 0;
+
+    /**
+     * 1级菜单
+     */
+    Integer LEVEL_ONE = 1;
+
+    /**
+     * 1级菜单父id
+     */
+    String PARENT_ID = "0";
+
+    /**
+     * 2级菜单
+     */
+    Integer LEVEL_TWO = 2;
+
+    /**
+     * 顶部菜单类型权限
+     */
+    Integer PERMISSION_NAV = -1;
+
+    /**
+     * 页面类型权限
+     */
+    Integer PERMISSION_PAGE = 0;
+
+    /**
      * 操作类型权限
      */
     Integer PERMISSION_OPERATION = 1;

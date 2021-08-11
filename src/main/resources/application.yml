@@ -130,6 +130,7 @@ ignored:
     - /lanxi/admin/**
     - /lanxi/dictData/getByType/**
     - /lanxi/user/**
+    - /lanxi/role/**
     - /lanxi/common/**
     - /druid/**
     - /doc.html
