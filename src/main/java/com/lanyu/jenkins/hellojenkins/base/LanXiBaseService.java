@@ -12,6 +12,7 @@ import java.util.List;
  * @author lanyu
  * @date 2021年06月08日 11:13
  */
+@FunctionalInterface
 public interface LanXiBaseService<E,ID extends Serializable> {
 
     public LanXiBaseDao<E,ID> getRepository();

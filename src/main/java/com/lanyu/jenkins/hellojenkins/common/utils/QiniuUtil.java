@@ -1,5 +1,15 @@
 package com.lanyu.jenkins.hellojenkins.common.utils;
 
+
+import com.google.gson.Gson;
+import com.lanyu.jenkins.hellojenkins.common.exception.LanXiException;
+import com.qiniu.common.QiniuException;
+import com.qiniu.http.Response;
+import com.qiniu.storage.Configuration;
+import com.qiniu.storage.Region;
+import com.qiniu.storage.UploadManager;
+import com.qiniu.storage.model.DefaultPutRet;
+import com.qiniu.util.Auth;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -14,16 +24,23 @@ import java.io.InputStream;
 @Slf4j
 @Component
 public class QiniuUtil {
-    @Value("${xboot.qiniu.secretKey}")
+
+    /**
+     * 生成上传凭证，然后准备上传
+     */
+    @Value("${lanxi.qiniu.accessKey}")
+
+    private String accessKey;
+    @Value("${lanxi.qiniu.secretKey}")
     private String secretKey;
 
-    @Value("${xboot.qiniu.bucket}")
+    @Value("${lanxi.qiniu.bucket}")
     private String bucket;
 
-    @Value("${xboot.qiniu.domain}")
+    @Value("${lanxi.qiniu.domain}")
     private String domain;
 
-    @Value("${xboot.qiniu.zone}")
+    @Value("${lanxi.qiniu.zone}")
     private Integer zone;
 
     /**
@@ -70,7 +87,7 @@ public class QiniuUtil {
             return domain + "/" + putRet.key;
         } catch (QiniuException ex) {
             Response r = ex.response;
-            throw new XbootException("上传文件出错，请检查七牛云配置，" + r.toString());
+            throw new LanXiException("上传文件出错，请检查七牛云配置，" + r.toString());
         }
     }
 
@@ -90,7 +107,7 @@ public class QiniuUtil {
             return domain + "/" + putRet.key;
         } catch (QiniuException ex) {
             Response r = ex.response;
-            throw new XbootException("上传文件出错，请检查七牛云配置，" + r.toString());
+            throw new LanXiException("上传文件出错，请检查七牛云配置，" + r.toString());
         }
     }
 }

@@ -108,15 +108,17 @@ public class UserController {
      * 获取当前登录用户接口
      * @return
      */
-    @RequestMapping(value = "/info",method = RequestMethod.GET)
+
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
     @ApiOperation(value = "获取当前登录用户接口")
-    public Result<User> getUserInfo(){
-        User user = securityUtil.getCurrentUser();
-        //清楚上下文环境，避免后面语句导致持久化
+    public Result<User> getUserInfo() {
+        User u = securityUtil.getCurrentUser();
+        // 清除持久上下文环境 避免后面语句导致持久化
         entityManager.clear();
-        user.setPassword(null);
-        return new ResultUtil<User>().setData(user);
+        u.setPassword(null);
+        return new ResultUtil<User>().setData(u);
     }
+
 
     /**
      * 修改绑定手机号

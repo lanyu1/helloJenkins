@@ -228,6 +228,7 @@ public class UserServiceImpl implements UserService {
             return new PermissionDTO().setTitle(e.getTitle()).setPath(e.getPath());
         }).collect(Collectors.toList());
         user.setPermissions(permissionDTOList);
+
         return user;
     }
 

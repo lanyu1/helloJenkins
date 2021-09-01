@@ -136,7 +136,8 @@ public class SecurityUtil {
      */
     public User getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || !authentication.isAuthenticated() || authentication.getName() == null || authentication instanceof AnonymousAuthenticationToken) {
+        if (authentication == null || !authentication.isAuthenticated() || authentication.getName() == null
+                || authentication instanceof AnonymousAuthenticationToken) {
             throw new LanXiException("未检测到登录用户");
         }
         return userService.findByUsername(authentication.getName());

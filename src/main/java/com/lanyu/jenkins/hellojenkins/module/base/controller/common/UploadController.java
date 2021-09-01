@@ -32,7 +32,7 @@ import java.io.InputStream;
 @Transactional
 public class UploadController {
 
-    @Value("${xboot.maxUploadFile}")
+    @Value("${lanxi.maxUploadFile}")
     private Integer maxUploadFile;
 
     @Autowired

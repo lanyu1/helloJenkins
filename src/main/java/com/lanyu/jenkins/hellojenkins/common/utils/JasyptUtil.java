@@ -1,8 +1,8 @@
 package com.lanyu.jenkins.hellojenkins.common.utils;
 
-import lombok.extern.slf4j.Slf4j;
 import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
  * jasypt加密工具类
@@ -53,9 +53,11 @@ public class JasyptUtil {
 
     public static void main(String[] args) {
 
-        //加密 若修改了第一个参数加密password记得在配置文件同步修改
-        System.out.println(encyptPwd("xboot", "123456"));
-        //解密
-        System.out.println(decyptPwd("xboot", "PYVnAYh+j5C3jkMV1d+myj6JzDaUk7pcfTWUaYsvQdEVkuvIVf7Y0mOU9XkffxT8"));
+//        //加密 若修改了第一个参数加密password记得在配置文件同步修改
+//        System.out.println(encyptPwd("xboot", "123456"));
+//        //解密
+//        System.out.println(decyptPwd("xboot", "PYVnAYh+j5C3jkMV1d+myj6JzDaUk7pcfTWUaYsvQdEVkuvIVf7Y0mOU9XkffxT8"));
+
+        System.out.println(new BCryptPasswordEncoder().encode("123456"));
     }
 }

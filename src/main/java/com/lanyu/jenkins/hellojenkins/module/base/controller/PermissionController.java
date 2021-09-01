@@ -173,7 +173,6 @@ public class PermissionController {
     @RequestMapping(value = "/edit", method = RequestMethod.POST)
     @ApiOperation(value = "编辑")
     public Result<Permission> edit(Permission permission) {
-
         if (permission.getId().equals(permission.getParentId())) {
             return ResultUtil.error("上级节点不能为自己");
         }

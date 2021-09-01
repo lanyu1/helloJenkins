@@ -11,7 +11,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/lanxi?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     druid:
       stat-view-servlet:
         # 默认true 内置监控页面首页/druid/index.html
@@ -129,7 +129,7 @@ ignored:
     - /lanxi/actuator/**
     - /lanxi/admin/**
     - /lanxi/dictData/getByType/**
-    - /lanxi/user/**
+    - /lanxi/user/register
     - /lanxi/role/**
     - /lanxi/common/**
     - /druid/**
@@ -147,7 +147,17 @@ ignored:
     - /**/*.css
     - /**/*.png
     - /**/*.ico
-
+swagger:
+  title: LanXi API接口文档
+  description: LanXi Api Documentation
+  version: 1.0.0
+  termsOfServiceUrl: http://lanxi.com.cn
+  contact:
+    name: lanyu
+    url: http://blog.exrick.cn
+    email: 1012139570@qq.com
+  # 分组名
+  group: 1.LanXi管理接口 v1.0
 # Mybatis-plus
 mybstis-plus:
   mapper-locations: classpath*:mapper/*.xml
